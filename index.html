@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一起玩气球大作战，为 Kevin 送上生日祝福！"
+    />
+    <meta name="theme-color" content="#fff8ed" />
+    <title>生日快乐 Kevin！🎂</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#home" aria-label="生日快乐 Kevin 首页">
+          <span class="wordmark-icon" aria-hidden="true">✦</span> PARTY TIME
+        </a>
+        <span class="top-note"><span class="live-dot"></span> 今天的主角是 Kevin</span>
+      </header>
+
+      <section class="birthday-card" id="home" aria-labelledby="page-title">
+        <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
+        <div class="sparkle sparkle-two" aria-hidden="true">✧</div>
+
+        <div class="intro">
+          <p class="eyebrow"><span aria-hidden="true">🎉</span> 一年一度的快乐时刻</p>
+          <h1 id="page-title">生日快乐，<span>Kevin</span>！</h1>
+          <p class="subtitle">今天所有的快乐，都要加倍送给你。</p>
+        </div>
+
+        <div class="game-stats" aria-label="游戏状态">
+          <div class="stat">
+            <span class="stat-label">得分</span>
+            <strong id="score" aria-live="polite">0</strong>
+          </div>
+          <div class="stat timer-stat">
+            <span class="stat-label">剩余时间</span>
+            <strong><span id="timer">30</span><small> 秒</small></strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">连续点击</span>
+            <strong><span id="combo">0</span><small> 连击</small></strong>
+          </div>
+        </div>
+
+        <div
+          class="game-area"
+          id="game-area"
+          role="group"
+          aria-label="气球游戏区域。点击气球得分。"
+        >
+          <div class="scenery" aria-hidden="true">
+            <span class="cloud cloud-left">☁</span>
+            <span class="cloud cloud-right">☁</span>
+            <span class="party-star star-left">✦</span>
+            <span class="party-star star-right">✧</span>
+            <span class="floor-confetti">✦　·　✧　·　✦　·　✧　·　✦</span>
+          </div>
+          <p class="game-hint" id="game-hint">点点气球，帮 Kevin 收集生日快乐！</p>
+          <div class="balloon-layer" id="balloon-layer"></div>
+          <div class="game-overlay" id="game-overlay">
+            <div class="overlay-card" id="overlay-card">
+              <span class="overlay-emoji" id="overlay-emoji" aria-hidden="true">🎂</span>
+              <h2 id="overlay-title">准备好开派对了吗？</h2>
+              <p id="overlay-message">30 秒内尽可能多地点破气球！连续点击还有连击加分哦。</p>
+              <button class="play-button" id="play-button" type="button">开始游戏 <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+          <div class="toast" id="toast" aria-live="polite"></div>
+        </div>
+
+        <div class="birthday-wish">
+          <span class="wish-icon" aria-hidden="true">💌</span>
+          <p>愿新的一岁，<strong>有趣有盼、平安喜乐</strong>，每一天都像今天一样闪闪发光！</p>
+          <span class="wish-sparkle" aria-hidden="true">✨</span>
+        </div>
+
+        <footer class="card-footer">
+          <span>为 Kevin 的生日派对特别制作</span>
+          <span>Made with <span class="heart" aria-label="爱">♥</span> &amp; lots of cake</span>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
